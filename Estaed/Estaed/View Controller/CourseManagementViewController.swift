@@ -17,7 +17,7 @@ class CourseManagementViewController: UIViewController {
       print("Welocome To Managment Class Teacher Name Is : \(courseDetails.addteachername)")
       
       
-      ///  to delete button
+//      /to delete button
      
       let db = FirebaseDatabase.Database.database()
 
