@@ -29,4 +29,13 @@ Instructors, students and Admin
 
 
 ## User stories - Instructors
-   - Create and update profile
+   
+
+
+
+### Sign In interface with necessary restrictions
+
+
+/Users/arwabalawi/Desktop/Simulator Screen Recording - iPhone 12 - 2022-01-11 at 01.35.10.mp4
+
+### Login interface with necessary restrictions
