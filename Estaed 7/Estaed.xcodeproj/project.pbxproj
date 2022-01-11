@@ -16,9 +16,10 @@
 		BF05A4322768EC7100C774C5 /* InstructorsCoursesTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05A4312768EC7100C774C5 /* InstructorsCoursesTabelViewController.swift */; };
 		BF05A4342768EF5700C774C5 /* InstructorsAddCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05A4332768EF5700C774C5 /* InstructorsAddCourse.swift */; };
 		BF0FC90D2779C97900302456 /* TableVCChallengesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0FC90B2779C97900302456 /* TableVCChallengesCell.swift */; };
-		BF0FC90E2779C97900302456 /* TableVCChallengesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0FC90C2779C97900302456 /* TableVCChallengesCell.xib */; };
 		BF0FC9102779CBA700302456 /* ChallengesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0FC90F2779CBA700302456 /* ChallengesTableViewController.swift */; };
 		BF64F6C72771A77C0033FDDE /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64F6C62771A77C0033FDDE /* CellProtocol.swift */; };
+		BF6C52BC278623180049340C /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6C52BA278623180049340C /* ChallengeCell.swift */; };
+		BF6C52BD278623180049340C /* ChallengeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6C52BB278623180049340C /* ChallengeCell.xib */; };
 		BF7697282774605D003AEE3E /* StudentCourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7697272774605D003AEE3E /* StudentCourseDetails.swift */; };
 		BF76972A27749A81003AEE3E /* StudentCourseDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76972927749A81003AEE3E /* StudentCourseDetailsModel.swift */; };
 		BF76972C27749F1D003AEE3E /* NormalQStudentCourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76972B27749F1D003AEE3E /* NormalQStudentCourseDetails.swift */; };
@@ -34,6 +35,7 @@
 		BF7C760A278309B10000C87B /* ActivateCourseVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C7608278309B10000C87B /* ActivateCourseVCCell.swift */; };
 		BF7C760B278309B10000C87B /* ActivateCourseVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7C7609278309B10000C87B /* ActivateCourseVCCell.xib */; };
 		BF7C760D2783211E0000C87B /* ActivateCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C760C2783211E0000C87B /* ActivateCourseViewController.swift */; };
+		BF834146278D5B31009328FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF834148278D5B31009328FA /* Localizable.strings */; };
 		BF867C8C27673B4D00679F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF867C8B27673B4D00679F90 /* AppDelegate.swift */; };
 		BF867C8E27673B4D00679F90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF867C8D27673B4D00679F90 /* SceneDelegate.swift */; };
 		BF867C9327673B4D00679F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF867C9127673B4D00679F90 /* Main.storyboard */; };
@@ -50,6 +52,13 @@
 		BF867D132768B15B00679F90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF867D122768B15B00679F90 /* Constants.swift */; };
 		BF867D152768D6CF00679F90 /* TeacherCourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF867D142768D6CF00679F90 /* TeacherCourseDetails.swift */; };
 		BF87CFF5276F84DF00D8AF7A /* StudentMainInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87CFF4276F84DF00D8AF7A /* StudentMainInterface.swift */; };
+		BF9D02C4278AC06D00A1F604 /* MyCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D02C2278AC06D00A1F604 /* MyCourseCell.swift */; };
+		BF9D02C5278AC06D00A1F604 /* MyCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9D02C3278AC06D00A1F604 /* MyCourseCell.xib */; };
+		BF9D02C8278AD7F500A1F604 /* MyLectureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D02C6278AD7F500A1F604 /* MyLectureCell.swift */; };
+		BF9D02C9278AD7F500A1F604 /* MyLectureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9D02C7278AD7F500A1F604 /* MyLectureCell.xib */; };
+		BF9D02CB278ADC1300A1F604 /* myLectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D02CA278ADC1300A1F604 /* myLectureViewController.swift */; };
+		BF9D02CE278AF3A700A1F604 /* myCallengesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D02CC278AF3A600A1F604 /* myCallengesCell.swift */; };
+		BF9D02CF278AF3A700A1F604 /* myCallengesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9D02CD278AF3A700A1F604 /* myCallengesCell.xib */; };
 		BFBFCEBD277AE9AD0065E305 /* ChallengDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFCEBC277AE9AD0065E305 /* ChallengDetailsViewController.swift */; };
 		BFBFCEBF277AF7670065E305 /* ChallengAttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFCEBE277AF7670065E305 /* ChallengAttachmentViewController.swift */; };
 		BFBFCEC1277B41890065E305 /* ChallengDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFCEC0277B41890065E305 /* ChallengDetailsModel.swift */; };
@@ -59,6 +68,10 @@
 		BFDBD4C62774B62E0020A279 /* CrashTStudentCourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBD4C52774B62E0020A279 /* CrashTStudentCourseDetails.swift */; };
 		BFDBD4C82774C2CB0020A279 /* NormalTStudentCourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBD4C72774C2CB0020A279 /* NormalTStudentCourseDetails.swift */; };
 		BFDBD4CA277663180020A279 /* payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBD4C9277663180020A279 /* payment.swift */; };
+		BFE42A0B278478B1006AEC5C /* StudentChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE42A0A278478B1006AEC5C /* StudentChallengeViewController.swift */; };
+		BFE42A0E27847C60006AEC5C /* StudentChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE42A0C27847C60006AEC5C /* StudentChallengeCell.swift */; };
+		BFE42A0F27847C60006AEC5C /* StudentChallengeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE42A0D27847C60006AEC5C /* StudentChallengeCell.xib */; };
+		BFE42A112785D142006AEC5C /* MyCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE42A102785D142006AEC5C /* MyCourseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,9 +103,10 @@
 		BF05A4312768EC7100C774C5 /* InstructorsCoursesTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorsCoursesTabelViewController.swift; sourceTree = "<group>"; };
 		BF05A4332768EF5700C774C5 /* InstructorsAddCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorsAddCourse.swift; sourceTree = "<group>"; };
 		BF0FC90B2779C97900302456 /* TableVCChallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVCChallengesCell.swift; sourceTree = "<group>"; };
-		BF0FC90C2779C97900302456 /* TableVCChallengesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableVCChallengesCell.xib; sourceTree = "<group>"; };
 		BF0FC90F2779CBA700302456 /* ChallengesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesTableViewController.swift; sourceTree = "<group>"; };
 		BF64F6C62771A77C0033FDDE /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		BF6C52BA278623180049340C /* ChallengeCell.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
+		BF6C52BB278623180049340C /* ChallengeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallengeCell.xib; sourceTree = "<group>"; };
 		BF7697272774605D003AEE3E /* StudentCourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCourseDetails.swift; sourceTree = "<group>"; };
 		BF76972927749A81003AEE3E /* StudentCourseDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCourseDetailsModel.swift; sourceTree = "<group>"; };
 		BF76972B27749F1D003AEE3E /* NormalQStudentCourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalQStudentCourseDetails.swift; sourceTree = "<group>"; };
@@ -108,6 +122,10 @@
 		BF7C7608278309B10000C87B /* ActivateCourseVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateCourseVCCell.swift; sourceTree = "<group>"; };
 		BF7C7609278309B10000C87B /* ActivateCourseVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivateCourseVCCell.xib; sourceTree = "<group>"; };
 		BF7C760C2783211E0000C87B /* ActivateCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateCourseViewController.swift; sourceTree = "<group>"; };
+		BF834142278D5A4A009328FA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		BF834143278D5A4A009328FA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BF834147278D5B31009328FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF834149278D5B3E009328FA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF867C8827673B4D00679F90 /* Estaed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Estaed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF867C8B27673B4D00679F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF867C8D27673B4D00679F90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +148,13 @@
 		BF867D122768B15B00679F90 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF867D142768D6CF00679F90 /* TeacherCourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCourseDetails.swift; sourceTree = "<group>"; };
 		BF87CFF4276F84DF00D8AF7A /* StudentMainInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMainInterface.swift; sourceTree = "<group>"; };
+		BF9D02C2278AC06D00A1F604 /* MyCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCell.swift; sourceTree = "<group>"; };
+		BF9D02C3278AC06D00A1F604 /* MyCourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCourseCell.xib; sourceTree = "<group>"; };
+		BF9D02C6278AD7F500A1F604 /* MyLectureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLectureCell.swift; sourceTree = "<group>"; };
+		BF9D02C7278AD7F500A1F604 /* MyLectureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLectureCell.xib; sourceTree = "<group>"; };
+		BF9D02CA278ADC1300A1F604 /* myLectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myLectureViewController.swift; sourceTree = "<group>"; };
+		BF9D02CC278AF3A600A1F604 /* myCallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCallengesCell.swift; sourceTree = "<group>"; };
+		BF9D02CD278AF3A700A1F604 /* myCallengesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myCallengesCell.xib; sourceTree = "<group>"; };
 		BFBFCEBC277AE9AD0065E305 /* ChallengDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengDetailsViewController.swift; sourceTree = "<group>"; };
 		BFBFCEBE277AF7670065E305 /* ChallengAttachmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengAttachmentViewController.swift; sourceTree = "<group>"; };
 		BFBFCEC0277B41890065E305 /* ChallengDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengDetailsModel.swift; sourceTree = "<group>"; };
@@ -139,6 +164,10 @@
 		BFDBD4C52774B62E0020A279 /* CrashTStudentCourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashTStudentCourseDetails.swift; sourceTree = "<group>"; };
 		BFDBD4C72774C2CB0020A279 /* NormalTStudentCourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTStudentCourseDetails.swift; sourceTree = "<group>"; };
 		BFDBD4C9277663180020A279 /* payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payment.swift; sourceTree = "<group>"; };
+		BFE42A0A278478B1006AEC5C /* StudentChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentChallengeViewController.swift; sourceTree = "<group>"; };
+		BFE42A0C27847C60006AEC5C /* StudentChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentChallengeCell.swift; sourceTree = "<group>"; };
+		BFE42A0D27847C60006AEC5C /* StudentChallengeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentChallengeCell.xib; sourceTree = "<group>"; };
+		BFE42A102785D142006AEC5C /* MyCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,11 +216,22 @@
 			isa = PBXGroup;
 			children = (
 				A91461E4276A7A2100F85FC8 /* TableViewCell.xib */,
-				BF0FC90C2779C97900302456 /* TableVCChallengesCell.xib */,
+				BF9D02CC278AF3A600A1F604 /* myCallengesCell.swift */,
+				BF9D02CD278AF3A700A1F604 /* myCallengesCell.xib */,
 				BF867C9127673B4D00679F90 /* Main.storyboard */,
+				BF9D02CA278ADC1300A1F604 /* myLectureViewController.swift */,
+				BF9D02C6278AD7F500A1F604 /* MyLectureCell.swift */,
+				BF9D02C7278AD7F500A1F604 /* MyLectureCell.xib */,
+				BF9D02C2278AC06D00A1F604 /* MyCourseCell.swift */,
+				BF9D02C3278AC06D00A1F604 /* MyCourseCell.xib */,
+				BFE42A102785D142006AEC5C /* MyCourseViewController.swift */,
 				BF7C75F62781D9C80000C87B /* LectureTableViewController.swift */,
 				A9AA3FB02783A2D8008D35E7 /* LectureCell.swift */,
 				A9AA3FB12783A2D8008D35E7 /* LectureCell.xib */,
+				BFE42A0C27847C60006AEC5C /* StudentChallengeCell.swift */,
+				BFE42A0D27847C60006AEC5C /* StudentChallengeCell.xib */,
+				BF6C52BA278623180049340C /* ChallengeCell.swift */,
+				BF6C52BB278623180049340C /* ChallengeCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -227,6 +267,7 @@
 				BFDBD4C52774B62E0020A279 /* CrashTStudentCourseDetails.swift */,
 				BFDBD4C9277663180020A279 /* payment.swift */,
 				BFCF0088277683750085D507 /* ProfileStudent.swift */,
+				BFE42A0A278478B1006AEC5C /* StudentChallengeViewController.swift */,
 			);
 			path = Student;
 			sourceTree = "<group>";
@@ -244,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				BF76972927749A81003AEE3E /* StudentCourseDetailsModel.swift */,
+				BF867C8D27673B4D00679F90 /* SceneDelegate.swift */,
 				BF7C76062782023D0000C87B /* StudentCourseModel.swift */,
 			);
 			path = Student_model;
@@ -309,7 +351,6 @@
 				BF867D0F27686E3700679F90 /* Helpers */,
 				BF867D0C2767B84500679F90 /* Model */,
 				BF867C8B27673B4D00679F90 /* AppDelegate.swift */,
-				BF867C8D27673B4D00679F90 /* SceneDelegate.swift */,
 				BF867CC12767778700679F90 /* Controller */,
 				BF7C75A9277DD2DE0000C87B /* SeeChallengeVC.swift */,
 				BF87CFF4276F84DF00D8AF7A /* StudentMainInterface.swift */,
@@ -317,6 +358,7 @@
 				BF867C9627673B4E00679F90 /* LaunchScreen.storyboard */,
 				BF867D0A2767B52E00679F90 /* GoogleService-Info.plist */,
 				BF867C9927673B4E00679F90 /* Info.plist */,
+				BF834148278D5B31009328FA /* Localizable.strings */,
 			);
 			path = Estaed;
 			sourceTree = "<group>";
@@ -472,6 +514,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = BF867C7F27673B4D00679F90;
 			productRefGroup = BF867C8927673B4D00679F90 /* Products */;
@@ -490,14 +533,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9D02C5278AC06D00A1F604 /* MyCourseCell.xib in Resources */,
+				BF9D02C9278AD7F500A1F604 /* MyLectureCell.xib in Resources */,
 				BF867C9827673B4E00679F90 /* LaunchScreen.storyboard in Resources */,
 				A91461E6276A7A2100F85FC8 /* TableViewCell.xib in Resources */,
+				BF9D02CF278AF3A700A1F604 /* myCallengesCell.xib in Resources */,
+				BFE42A0F27847C60006AEC5C /* StudentChallengeCell.xib in Resources */,
 				BF867C9527673B4E00679F90 /* Assets.xcassets in Resources */,
 				BF7C760B278309B10000C87B /* ActivateCourseVCCell.xib in Resources */,
 				A9AA3FB32783A2D9008D35E7 /* LectureCell.xib in Resources */,
+				BF834146278D5B31009328FA /* Localizable.strings in Resources */,
 				BF867C9327673B4D00679F90 /* Main.storyboard in Resources */,
+				BF6C52BD278623180049340C /* ChallengeCell.xib in Resources */,
 				BF867D0B2767B52E00679F90 /* GoogleService-Info.plist in Resources */,
-				BF0FC90E2779C97900302456 /* TableVCChallengesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +613,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7C760A278309B10000C87B /* ActivateCourseVCCell.swift in Sources */,
+				BF9D02CE278AF3A700A1F604 /* myCallengesCell.swift in Sources */,
 				BF867CC627678AA300679F90 /* ViewController.swift in Sources */,
 				BF76972A27749A81003AEE3E /* StudentCourseDetailsModel.swift in Sources */,
 				BF05A4322768EC7100C774C5 /* InstructorsCoursesTabelViewController.swift in Sources */,
@@ -574,6 +623,7 @@
 				BF87CFF5276F84DF00D8AF7A /* StudentMainInterface.swift in Sources */,
 				BF76972C27749F1D003AEE3E /* NormalQStudentCourseDetails.swift in Sources */,
 				A9AA3FB22783A2D8008D35E7 /* LectureCell.swift in Sources */,
+				BFE42A0B278478B1006AEC5C /* StudentChallengeViewController.swift in Sources */,
 				BFDBD4C82774C2CB0020A279 /* NormalTStudentCourseDetails.swift in Sources */,
 				BF867CC2276777BA00679F90 /* LoginViewController.swift in Sources */,
 				A91461EB276A808000F85FC8 /* Constant.swift in Sources */,
@@ -589,6 +639,7 @@
 				BFCF0089277683750085D507 /* ProfileStudent.swift in Sources */,
 				A91461E5276A7A2100F85FC8 /* TableViewCell.swift in Sources */,
 				BFBFCEC1277B41890065E305 /* ChallengDetailsModel.swift in Sources */,
+				BF9D02CB278ADC1300A1F604 /* myLectureViewController.swift in Sources */,
 				BF64F6C72771A77C0033FDDE /* CellProtocol.swift in Sources */,
 				BF867C8C27673B4D00679F90 /* AppDelegate.swift in Sources */,
 				BF867CBC276776CE00679F90 /* SignUpViewController.swift in Sources */,
@@ -596,13 +647,18 @@
 				BFDBD4CA277663180020A279 /* payment.swift in Sources */,
 				BF7C760D2783211E0000C87B /* ActivateCourseViewController.swift in Sources */,
 				BF867C8E27673B4D00679F90 /* SceneDelegate.swift in Sources */,
+				BFE42A112785D142006AEC5C /* MyCourseViewController.swift in Sources */,
 				BF867D152768D6CF00679F90 /* TeacherCourseDetails.swift in Sources */,
 				BFDBD4C62774B62E0020A279 /* CrashTStudentCourseDetails.swift in Sources */,
 				BF867CCA27678BD500679F90 /* HomViewController.swift in Sources */,
+				BF9D02C4278AC06D00A1F604 /* MyCourseCell.swift in Sources */,
 				BF7C76032781F20A0000C87B /* StudentCoursesName.swift in Sources */,
+				BF9D02C8278AD7F500A1F604 /* MyLectureCell.swift in Sources */,
 				BF0FC90D2779C97900302456 /* TableVCChallengesCell.swift in Sources */,
 				BF867D1127686E8800679F90 /* Utilities.swift in Sources */,
+				BF6C52BC278623180049340C /* ChallengeCell.swift in Sources */,
 				BFCF008B277772130085D507 /* CourseUpdateViewController.swift in Sources */,
+				BFE42A0E27847C60006AEC5C /* StudentChallengeCell.swift in Sources */,
 				BF867D132768B15B00679F90 /* Constants.swift in Sources */,
 				BF7697282774605D003AEE3E /* StudentCourseDetails.swift in Sources */,
 			);
@@ -640,10 +696,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BF834148278D5B31009328FA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF834147278D5B31009328FA /* en */,
+				BF834149278D5B3E009328FA /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BF867C9127673B4D00679F90 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BF867C9227673B4D00679F90 /* Base */,
+				BF834142278D5A4A009328FA /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -652,6 +718,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BF867C9727673B4E00679F90 /* Base */,
+				BF834143278D5A4A009328FA /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -663,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -724,6 +792,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

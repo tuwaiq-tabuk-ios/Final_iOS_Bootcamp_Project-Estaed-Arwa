@@ -20,6 +20,51 @@ class InstructorsAddCourse : UIViewController {
     @IBOutlet weak var DisMissButton: UIButton!
     @IBOutlet weak var Add: UIButton!
     var ref : DatabaseReference!
+  let datePicker = UIDatePicker()
+  
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setUpElements()
+    ref = Database.database().reference()
+    createDatePicker()
+      
+  }
+  
+  func createDatePicker() {
+    
+    courseDate.textAlignment = .left
+    //toolbar
+    let toolbar = UIToolbar()
+    toolbar.sizeToFit()
+    
+    //bar button
+    let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+    toolbar.setItems([doneBtn], animated: true)
+    
+    //assign toolbar
+    courseDate.inputAccessoryView = toolbar
+    
+    //assign date picker to text field
+    courseDate.inputView = datePicker
+    
+    //date picker mode
+    datePicker.datePickerMode = .date
+    datePicker.frame = .init(x: 10, y: 100, width: view.frame.width, height: 200)
+  }
+  
+  @objc func donePressed(){
+    
+  // formatter
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .none
+    
+    courseDate.text = formatter.string(from: datePicker.date)
+    self.view.endEditing(true)
+    
+  }
+  
   
     @IBAction func DismissedButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -60,13 +105,7 @@ class InstructorsAddCourse : UIViewController {
     }
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setUpElements()
-    ref = Database.database().reference()
-      
-  }
-  
+
   
   func setUpElements() {
      

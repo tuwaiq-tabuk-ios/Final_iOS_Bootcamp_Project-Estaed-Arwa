@@ -6,7 +6,7 @@
 
 
 import UIKit
-
+import FirebaseDatabase
 class ActivateCourseVCCell: UITableViewCell {
   
   
@@ -19,7 +19,7 @@ class ActivateCourseVCCell: UITableViewCell {
   
   @IBAction func paidBtn(_ sender: Any) {
    // self.paidBtn = true
-    
+    Database.database().reference().child(studentIdCell.text!).child("isPaid").setValue("true")
   }
   
   

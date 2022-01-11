@@ -16,6 +16,16 @@ struct CourseModel {
   var courseTimeKind : String   //  normal , crush
   var instructorsId : String
   
+  init(){
+    self.courseId = ""
+    self.courseName = ""
+    self.courseContents = ""
+    self.courseDate = ""
+    self.coursePrice = ""
+    self.courseTimeKind = ""
+    self.instructorsId = ""
+  }
+  
   init(cId : String, cName : String  ,cContent : String ,cDate : String ,cPrice : String , cTimeKind : String , insId : String)
   {
     self.courseId = cId

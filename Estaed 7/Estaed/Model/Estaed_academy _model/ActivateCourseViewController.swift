@@ -22,20 +22,21 @@ class ActivateCourseViewController: UIViewController {
       
       tableViewActivate.delegate = self
       tableViewActivate.dataSource = self
-  //    ref = Database.database().reference().child("???").child(????)
+     ref = Database.database().reference().child("StudentCourses")
       getData()
     }
   
   func getData()
   {
+    self.ref.getData { error, Data in
     
-    self.ref.observe(.value) { dataSnapShot in
       if !self.StudentCourseModelList.isEmpty
       {
         self.StudentCourseModelList.removeAll()
       }
-      if let data =  dataSnapShot.value as? NSDictionary{
+      if let data =  Data.value as? NSDictionary{
         for (_,v) in data {
+          
           let value = v as! NSDictionary
           self.StudentCourseModelList.append(StudentCourseModel(value: value))
         }
@@ -69,7 +70,7 @@ extension ActivateCourseViewController : UITableViewDelegate , UITableViewDataSo
     cell?.studentIdCell.text =
       self.StudentCourseModelList[indexPath.row].StudentId
 //cell?.paidBtn = false???
-    self.StudentCourseModelList[indexPath.row].isPaid
+    //self.StudentCourseModelList[indexPath.row].isPaid
     
     
     return cell!

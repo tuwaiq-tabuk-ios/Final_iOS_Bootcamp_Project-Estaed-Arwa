@@ -69,24 +69,7 @@ class StudentCourseDetails : UIViewController {
         }
       }
     }
-//    ref.child("courses").child(instructorsld).child("Crash").observe(.value) { (snapshot) in
-//    let snapshotVaue = snapshot.value as? NSDictionary
 
-//
-//
-//   let CourseContentsStudent = snapshotVaue?[""] as? String
-//   let CoursePriceStudent = snapshotVaue?[""] as? String
-//   let CourseTimeStudent = snapshotVaue? [""] as? String
-//
-//
-//      self.CourseContentsQStudent.text = CourseContentsStudent
-//      self.CoursePriceQStudent.text = CoursePriceStudent
-//      self.CourseTimeQStudent.text = CourseTimeStudent
-//
-//      self.CrshStudentCourseDetailsModellist.append(StudentCourseDetailsModel(sCourseContents: CoursePriceStudent!, sCourseTime: CourseTimeStudent!, sCoursePrice: CoursePriceStudent!))
-//    }
-//  }
-    
   
   }
 

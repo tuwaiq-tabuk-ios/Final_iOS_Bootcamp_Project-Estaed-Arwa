@@ -13,7 +13,7 @@ import FirebaseDatabase
 import Firebase
 import FirebaseCore
 
-class SignUpViewController : UIViewController {
+class SignUpViewController : UIViewController,UITextFieldDelegate{
 
   @IBOutlet weak var FirstNameTextField: UITextField!
   @IBOutlet weak var LastNameTextField: UITextField!
@@ -25,14 +25,40 @@ class SignUpViewController : UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    FirstNameTextField.delegate = self
+    LastNameTextField.delegate = self
+    EmailTextField.delegate = self
+    PasswordTextField.delegate = self
+
    setUpElements()
-    
     ref = Database.database().reference()
-   
   }
- 
   
+  //hide the keyboard
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    view.endEditing(true)
+  }
+  //
+  
+  //Transfer to next textfield directly
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if textField == FirstNameTextField {
+      LastNameTextField.becomeFirstResponder()
+      
+    }else if  textField == LastNameTextField {
+      EmailTextField.becomeFirstResponder()
+    }else if textField == EmailTextField {
+      PasswordTextField.becomeFirstResponder()
+    } else {
+      //hide the keyboard
+      view.endEditing(true)
+    }
+    
+    return true
+  }
+  //
+
   func setUpElements() {
     
     //Hide the error label

@@ -9,7 +9,8 @@ import UIKit
 import FirebaseDatabase
 
 class ChallengesTableViewController: UIViewController {
-  
+
+
   @IBOutlet weak var tableViewCH: UITableView!
   
   var ChallengAttachmentModelList = [ChallengAttachmentModel]()
@@ -31,7 +32,8 @@ class ChallengesTableViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    tableViewCH.register(UINib(nibName: "TableVCChallenges", bundle: nil), forCellReuseIdentifier: "myCell")
+//    tableViewCH.register(UINib(nibName: "myCell", bundle: nil), forCellReuseIdentifier: "myCell")
+    tableViewCH.register(ChallengeCell.self, forCellReuseIdentifier: "myCell")
     tableViewCH.delegate = self
     tableViewCH.dataSource = self
     ref = Database.database().reference()
@@ -89,12 +91,16 @@ extension ChallengesTableViewController : UITableViewDelegate,UITableViewDataSou
   
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    let cell = tableView.dequeueReusableCell(withIdentifier:
+   // let cell = tableView.dequeue() as! TableChallengeCell
+  guard  let cell = tableView.dequeueReusableCell(withIdentifier:
                                               "myCell",
-                                             for: indexPath) as? TableVCChallengesCell
-    
-    
+                                                  for: indexPath) as? ChallengeCell else{
+    print("error in returning Cell")
+    return UITableViewCell()
+  }
+
+   
+  
     let titleOfCH = self.ChallengAttachmentModelList[indexPath.row].titleOfCH
     let subjectOfCH =
       self.ChallengAttachmentModelList[indexPath.row].subjectOfCH
@@ -104,14 +110,17 @@ extension ChallengesTableViewController : UITableViewDelegate,UITableViewDataSou
       self.ChallengAttachmentModelList[indexPath.row].numberOfCH
     let difficultylevel =
       self.ChallengAttachmentModelList[indexPath.row].difficultylevel
-    cell?.difficultyLevel.text = difficultylevel
-    cell?.numberOfChallenge.text = numberOfCH
-    cell?.numberOfWeek.text = numberOfweek
-    cell?.subjectOfChalleng.text = subjectOfCH
-    cell?.titleOfChallenge.text = titleOfCH
-    cell?.BtnChallengDetails.tag = indexPath.row
-      cell?.myCellDelegate = self
-    return cell!
+    let model = ChallengAttachmentModel(ChallengId: "",
+                                        numberOfCH: numberOfCH,
+                                        titleOfCH: titleOfCH,
+                                        numberOfweek: numberOfweek,
+                                        difficultylevel: difficultylevel,
+                                        subjectOfCH: subjectOfCH,
+                                        cId: TransferedCId)
+    cell.initCell(model: model)
+    cell.BtnChallengDetails.tag = indexPath.row
+      cell.myCellDelegate = self
+    return cell
     
   }
   

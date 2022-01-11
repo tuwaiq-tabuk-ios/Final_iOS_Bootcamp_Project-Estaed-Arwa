@@ -13,7 +13,7 @@ class InstructorsCoursesTabelViewController : UIViewController {
   @IBOutlet var tableViewCD : UITableView!
   var courses = [CourseModel]()  /// ???? ()
   var ref: DatabaseReference!
-  
+  var currentCourseindex = -1
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -55,6 +55,28 @@ class InstructorsCoursesTabelViewController : UIViewController {
 
 extension InstructorsCoursesTabelViewController : UITableViewDelegate,UITableViewDataSource ,MyCellDelegate
 {
+ 
+  
+  func tableView(_ tableView: UITableView,
+                  trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
+   -> UISwipeActionsConfiguration? {
+     let delete = UIContextualAction(style: .destructive,
+                                     title: "Delete") { ACTION,
+                                                        view,
+                                                        result in
+       print("delete Tapped")
+      let userId = Constant.userId
+      self.ref.child(self.courses[indexPath.row].courseId).removeValue { Error, data in
+        if Error != nil
+        {
+          print(Error?.localizedDescription)
+        }
+      }
+       result(true)
+      tableView.reloadData()
+     }
+    return UISwipeActionsConfiguration(actions: [delete])
+  }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
@@ -65,29 +87,51 @@ extension InstructorsCoursesTabelViewController : UITableViewDelegate,UITableVie
     cell?.coursePrice.text = self.courses[indexPath.row].coursePrice
     cell?.courseTime.text = self.courses[indexPath.row].courseDate
     cell?.btnManageCourse.tag = indexPath.row
-    cell?.btnChallenge.tag = indexPath.row
+    self.currentCourseindex = indexPath.row
+    cell?.btnChallenge.tag = 500
+    cell?.btnLectures.tag = 600
     cell?.myCellDelegate = self
  
     return cell!
   }
   
+ 
   
   func didPressButton(_ tag : Int)
   {
-    let courseDetails = self.courses[tag]
+    if tag == 500
+    {
+      let story = UIStoryboard(name: "Main", bundle: nil)
+       if let next = story.instantiateViewController(identifier: "Challenges") as? ChallengesTableViewController{
+         next.modalPresentationStyle = .fullScreen
+        next.TransferedCId = self.courses[self.currentCourseindex].courseId
+        self.present(next, animated: true, completion: nil)
+         
+       }
+      
+    }else if tag == 600
+    {
+      let story = UIStoryboard(name: "Main", bundle: nil)
+       if let next = story.instantiateViewController(identifier: "LectureTableViewController") as? LectureTableViewController{
+         next.modalPresentationStyle = .fullScreen
+        next.courseId = self.courses[self.currentCourseindex].courseId
+        self.present(next, animated: true, completion: nil)
+         
+       }
+    }else
+    {
+      let courseDetails = self.courses[tag]
+     
+      //تأكدت ان المعلومات انتقلت الآن الى هذه الواجهه
+      let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      
+      if let Manage = storyboard?.instantiateViewController(identifier: "courseManage") as? CourseUpdateViewController{
+        Manage.courseDetails = courseDetails
+        self.present(Manage, animated: true, completion: nil)
+      }
+     
+    }
    
-    //تأكدت ان المعلومات انتقلت الآن الى هذه الواجهه
-    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    
-    let Manage = storyboard?.instantiateViewController(identifier: "courseManage") as? CourseUpdateViewController
-    Manage?.courseDetails = courseDetails
-    //تم انتقال المعلومات
-    Constant.courseName = courseDetails.courseName
-    Constant.courseTimeKind = courseDetails.courseTimeKind
-    let Challenge = storyboard?.instantiateViewController(identifier: "Challenges") as? ChallengesTableViewController
-    Challenge?.TransferedCId = courseDetails.courseId
-    Challenge?.modalPresentationStyle = .fullScreen
-    self.present(Challenge!, animated: true, completion: nil)
     //    //تم انتقال المعلومات
   }
 

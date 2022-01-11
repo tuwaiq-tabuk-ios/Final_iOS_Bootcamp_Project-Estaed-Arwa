@@ -31,12 +31,12 @@ class LectureTableViewController: UIViewController {
   
   func getLecture()
   {
-    
+    if !self.LectureModelList.isEmpty
+    {
+      self.LectureModelList.removeAll()
+    }
     self.ref.observe(.value) { dataSnapShot in
-      if !self.LectureModelList.isEmpty
-      {
-        self.LectureModelList.removeAll()
-      }
+     
       if let data =  dataSnapShot.value as? NSDictionary{
         for (_,v) in data {
           let value = v as! NSDictionary
@@ -66,14 +66,15 @@ extension LectureTableViewController : UITableViewDelegate,UITableViewDataSource
     
        let cell = tableView.dequeueReusableCell(withIdentifier: "LectureCell", for: indexPath) as? LectureCell
     
-    
+    cell!.nameLabel.text =
+      self.LectureModelList[indexPath.row].lectureName
       cell!.urlLabel.text = self.LectureModelList[indexPath.row].lectureURL
       cell!.dateLabel.text = self.LectureModelList[indexPath.row].lectureDate
       cell!.timeLabel.text = self.LectureModelList[indexPath.row].lectureTime
       return cell!
    
   }
-// myLectCell
+
     
   
 }

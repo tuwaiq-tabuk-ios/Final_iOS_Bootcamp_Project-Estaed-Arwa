@@ -10,7 +10,8 @@ import UIKit
 
 
 struct  LectureModel {
-    
+  
+  var lectureName : String
   var lectureURL : String
   var lectureTime : String
   var lectureDate : String
@@ -19,6 +20,7 @@ struct  LectureModel {
     func toDic() -> Any
     {
       return [
+        "LectureName" : self.lectureName,
         "lectureURL" : self.lectureURL,
         "lectureTime": self.lectureTime,
         "lectureDate": self.lectureDate,
@@ -29,6 +31,7 @@ struct  LectureModel {
     
     init(value : NSDictionary)
     {
+      self.lectureName = value["LectureName"] as! String
       self.lectureURL = value["lectureURL"] as! String
       self.lectureTime = value["lectureTime"] as! String
       self.lectureDate = value["lectureDate"] as! String
@@ -37,11 +40,13 @@ struct  LectureModel {
     }
     
     
-    init(lectureURL : String,
+    init(LectureName : String,
+         lectureURL : String,
          lectureTime : String,
          lectureDate : String,
          courseId : String)
     {
+      self.lectureName = LectureName
       self.lectureURL = lectureURL
       self.lectureTime = lectureTime
       self.lectureDate = lectureDate

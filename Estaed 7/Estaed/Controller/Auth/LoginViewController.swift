@@ -8,25 +8,72 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
   
   @IBOutlet weak var EmailTextField: UITextField!
-  
-  
   @IBOutlet weak var PasswordTextField: UITextField!
-  
-  
   @IBOutlet weak var LoginButton: UIButton!
-  
-  
   @IBOutlet weak var ErrorLabel: UILabel!
+  var iconClick = false
+  let imageicon = UIImageView()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    EmailTextField.delegate = self
+    PasswordTextField.delegate = self
+    
     setUpElements()
+    
+    imageicon.image = UIImage(named: "closeEye")
+    
+    let contentView = UIView()
+    contentView.addSubview(imageicon)
+    
+    contentView.frame = CGRect(x: 0, y: 0, width: UIImage(named: "closeEye")!.size.width, height: UIImage(named: "closeEye")!.size.height)
+    
+    imageicon.frame = CGRect(x: -10, y: 0, width: UIImage(named: "closeEye")!.size.width, height: UIImage(named: "closeEye")!.size.height)
+    
+    PasswordTextField.rightView = contentView
+    PasswordTextField.rightViewMode = .always
+    
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+    imageicon.isUserInteractionEnabled = true
+    imageicon.addGestureRecognizer(tapGestureRecognizer)
   }
+   
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if textField == EmailTextField {
+      PasswordTextField.becomeFirstResponder()
+    } else {
+      //hide the keyboard
+      view.endEditing(true)
+    }
+    return true
+  }
+
+
+  
+  @objc func imageTapped (tapGestureRecognizer:UITapGestureRecognizer)
+  {
+    let tappedImage = tapGestureRecognizer.view as! UIImageView
+    
+    if iconClick
+    {
+      iconClick = false
+      tappedImage.image = UIImage(named: "openEye")
+      PasswordTextField.isSecureTextEntry = false
+    }
+    else
+    {
+      iconClick = true
+      tappedImage.image = UIImage(named: "closeEye")
+      PasswordTextField.isSecureTextEntry = true
+      
+    }
+   
+  }
+  
   
   func setUpElements() {
     
