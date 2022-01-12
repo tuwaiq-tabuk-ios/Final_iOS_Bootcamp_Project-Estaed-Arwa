@@ -1615,6 +1615,39 @@ a month and a half ! </string>
             </objects>
             <point key="canvasLocation" x="3312" y="-598"/>
         </scene>
+        <!--My courses-->
+        <scene sceneID="vdm-R7-ics">
+            <objects>
+                <viewController id="eIO-lE-E4F" customClass="MyCourseViewController" customModule="Estaed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IUV-CK-Pxd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QzV-20-2Ai">
+                                <rect key="frame" x="0.0" y="108" width="414" height="651"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oOD-16-ZU6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QzV-20-2Ai" firstAttribute="top" secondItem="oOD-16-ZU6" secondAttribute="top" id="6Ni-MW-FaX"/>
+                            <constraint firstItem="QzV-20-2Ai" firstAttribute="leading" secondItem="oOD-16-ZU6" secondAttribute="leading" id="NW5-hK-zSL"/>
+                            <constraint firstItem="oOD-16-ZU6" firstAttribute="bottom" secondItem="QzV-20-2Ai" secondAttribute="bottom" id="Qoz-1v-7iF"/>
+                            <constraint firstItem="oOD-16-ZU6" firstAttribute="trailing" secondItem="QzV-20-2Ai" secondAttribute="trailing" id="izo-dq-kcU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My courses" id="qWf-ce-JyX">
+                        <barButtonItem key="backBarButtonItem" title="  " id="JZp-1P-gco"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableViewMyCourse" destination="QzV-20-2Ai" id="5fn-yU-Abj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5X-xQ-KNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5545" y="-1276"/>
+        </scene>
         <!--Student Challeng AttachmentVC-->
         <scene sceneID="YSw-EB-sD0">
             <objects>
@@ -1787,6 +1820,9 @@ a month and a half ! </string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eIO-lE-E4F" kind="relationship" relationship="rootViewController" id="pFg-6Z-eqL"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w7-y8-5KC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
