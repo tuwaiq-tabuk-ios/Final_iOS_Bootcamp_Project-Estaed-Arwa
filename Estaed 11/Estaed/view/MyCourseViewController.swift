@@ -15,7 +15,7 @@ class MyCourseViewController: UIViewController {
   var ref : DatabaseReference!
   var CourseModelList = [StudentCourseModel]()
   var paidCourses = [StudentCourseModel]()
-  
+  var isChallengebtnPressed = false , isLectureBtnPressed = false
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -65,14 +65,28 @@ class MyCourseViewController: UIViewController {
   
 extension MyCourseViewController : UITableViewDelegate,UITableViewDataSource , MyCellDelegate {
   func didPressButton(_ tag: Int) {
-    let storyboard = UIStoryboard.init(name:
-      "Main" , bundle: nil)
-    if let next = storyboard.instantiateViewController(identifier:"myLectureViewController" ) as? myLectureViewController{
+      let storyboard = UIStoryboard.init(name:
+        "Main" , bundle: nil)
+      if isChallengebtnPressed
+      {
+          if let next = storyboard.instantiateViewController(identifier:"StudentChallengAttachmentVC" ) as? StudentChallengAttachmentVC{
+              next.modalPresentationStyle = .fullScreen
+              next.TransferedCId = self.CourseModelList[tag].courseId
+              self.present(next, animated: true, completion:  nil)
+            }
+      }
+       if isLectureBtnPressed
+      {
+          if let next = storyboard.instantiateViewController(identifier:"myLectureViewController" ) as? myLectureViewController{
+              next.modalPresentationStyle = .fullScreen
+              next.courseId = self.CourseModelList[tag].courseId
+              self.present(next, animated: true, completion:  nil)
+            }
+      }
+    
+    
       
-      next.modalPresentationStyle = .fullScreen
-      next.courseId = self.CourseModelList[tag].courseId
-      self.present(next, animated: true, completion:  nil)
-    }
+    
   }
   
     
@@ -91,6 +105,10 @@ extension MyCourseViewController : UITableViewDelegate,UITableViewDataSource , M
           cell?.LecturBtn.tag = indexPath.row
           cell?.cellDelegete = self
           cell!.courseTimeKind.text = course.courseTimeKind
+            cell?.challingBtn.tag = indexPath.row
+            cell?.challingBtn.addTarget(self, action: #selector(self.challingbtnTapped), for: .touchUpInside)
+          
+            cell?.LecturBtn.addTarget(self, action: #selector(self.lecturebtnTapped), for: .touchUpInside)
         }
       }
    
@@ -98,8 +116,18 @@ extension MyCourseViewController : UITableViewDelegate,UITableViewDataSource , M
     
   }
   
-  
-  
+    @objc func challingbtnTapped()
+    {
+        isChallengebtnPressed = true
+        isLectureBtnPressed = false
+        
+    }
+    @objc func lecturebtnTapped()
+    {
+        isChallengebtnPressed = false
+        isLectureBtnPressed = true
+        
+    }
 }
 
 

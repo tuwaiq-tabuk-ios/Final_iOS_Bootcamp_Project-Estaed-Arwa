@@ -21,7 +21,7 @@ class StudentChallengAttachmentVC: UIViewController {
      super.viewDidLoad()
  
  //    tableViewCH.register(UINib(nibName: "myCell", bundle: nil), forCellReuseIdentifier: "myCell")
-    tableViewStudentCH.register(myCallengesAttachmentCell.self, forCellReuseIdentifier: "myCell")
+    tableViewStudentCH.register(UINib(nibName: "myCallengesAttachmentCell", bundle: nil), forCellReuseIdentifier: "myCell")
     tableViewStudentCH.delegate = self
     tableViewStudentCH.dataSource = self
      ref = Database.database().reference()
@@ -85,8 +85,11 @@ extension StudentChallengAttachmentVC : UITableViewDelegate,UITableViewDataSourc
      let difficultylevel =
        self.ChallengAttachmentModelList[indexPath.row].difficultylevel
 //    let model = ChallengAttachmentModel(ChallengId: "", numberOfCH:numberOfCH , titleOfCH: titleOfCH, numberOfweek: <#T##String#>, difficultylevel: difficultylevel, subjectOfCH: subjectOfCH, cId: TransferedCId)
-
-
+       cell.difficultyOfCh.text = difficultylevel
+       cell.numberOfCh.text = numberOfCH
+       cell.subjectOfCh.text = subjectOfCH
+       cell.titleOfCh.text = titleOfCH
+       
     return cell
 
    }

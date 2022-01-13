@@ -13,11 +13,13 @@ class MyCourseCell: UITableViewCell {
   @IBOutlet weak var courseTimeKind: UILabel!  
   @IBOutlet weak var LecturBtn: UIButton!
 
-  var cellDelegete : MyCellDelegate!
+    @IBOutlet weak var challingBtn: UIButton!
+    var cellDelegete : MyCellDelegate!
   
   @IBAction func LecturBtn(_ sender: UIButton) {
     cellDelegete.didPressButton(sender.tag)
   }
+  
   
   
   
@@ -30,6 +32,9 @@ class MyCourseCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    @IBAction func challengeBtnTapped(_ sender: UIButton) {
+        cellDelegete.didPressButton(sender.tag)
     }
     
 }
