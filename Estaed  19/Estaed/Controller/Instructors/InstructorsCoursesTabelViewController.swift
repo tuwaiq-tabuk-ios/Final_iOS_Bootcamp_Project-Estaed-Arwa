@@ -17,7 +17,9 @@ class InstructorsCoursesTabelViewController : UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    //hide backbtn
     navigationItem.hidesBackButton = true
+    
     tableViewCD.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
     tableViewCD.delegate = self
     tableViewCD.dataSource = self
@@ -47,7 +49,13 @@ class InstructorsCoursesTabelViewController : UIViewController {
   }
   
  
-  
+  @IBAction func AddBtn(_ sender: Any) {
+    if let next = storyboard?.instantiateViewController(identifier: "InstructorsAddCourse") as? InstructorsAddCourse{
+      next.modalPresentationStyle = .fullScreen
+      self.navigationController?.pushViewController(next, animated: true)
+    }
+  }
+  //InstructorsAddCourse
 }
 
 extension InstructorsCoursesTabelViewController : UITableViewDelegate,UITableViewDataSource ,MyCellDelegate
@@ -100,20 +108,24 @@ extension InstructorsCoursesTabelViewController : UITableViewDelegate,UITableVie
     if tag == 500
     {
       let story = UIStoryboard(name: "Main", bundle: nil)
+      /// navigate to instructor screen
       if let next = story.instantiateViewController(identifier: Constant.storyboard.ChallengesTableViewController) as? ChallengesTableViewController{
-         next.modalPresentationStyle = .fullScreen
+        
+        next.modalPresentationStyle = .fullScreen
         next.TransferedCId = self.courses[self.currentCourseindex].courseId
-        self.present(next, animated: true, completion: nil)
-         
+      //  self.present(next, animated: true, completion: nil)
+        self.navigationController?.pushViewController(next, animated: true)
        }
       
     }else if tag == 600
     {
       let story = UIStoryboard(name: "Main", bundle: nil)
+      //
       if let next = story.instantiateViewController(identifier: Constant.storyboard.LectureTableViewController) as? LectureTableViewController{
          next.modalPresentationStyle = .fullScreen
         next.courseId = self.courses[self.currentCourseindex].courseId
-        self.present(next, animated: true, completion: nil)
+//        self.present(next, animated: true, completion: nil)
+        self.navigationController?.pushViewController(next, animated: true)
          
        }
     }else
@@ -125,7 +137,9 @@ extension InstructorsCoursesTabelViewController : UITableViewDelegate,UITableVie
       
       if let Manage = storyboard?.instantiateViewController(identifier: Constant.storyboard.CourseUpdateViewController) as? CourseUpdateViewController{
         Manage.courseDetails = courseDetails
-        self.present(Manage, animated: true, completion: nil)
+        Manage.modalPresentationStyle = .fullScreen
+//        self.present(Manage, animated: true, completion: nil)
+        self.navigationController?.pushViewController(Manage, animated: true)
       }
      
     }

@@ -160,14 +160,7 @@ class SignUpViewController : UIViewController,UITextFieldDelegate{
               }else
               {
                 Constant.StudentId = result!.user.uid
-                let tabBar : UITabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "tabBar")
-              
-                 let next = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StudentCoursesName") as! StudentCoursesName
-               tabBar.selectedViewController = next
-             //               let navi = UINavigationController(rootViewController: next)
-                tabBar.modalPresentationStyle = .fullScreen
-                self.present(tabBar, animated: true, completion: nil)
-                
+                Constant.navigateToUserScreen(context: self.navigationController!)
               }
             }
             

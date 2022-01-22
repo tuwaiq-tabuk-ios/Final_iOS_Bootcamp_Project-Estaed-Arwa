@@ -17,7 +17,6 @@ class InstructorsAddCourse : UIViewController {
     @IBOutlet weak var courseDate: UITextField!
     @IBOutlet weak var courseContents: UITextField!
     @IBOutlet weak var courseTimeKind: UISwitch!
-    @IBOutlet weak var DisMissButton: UIButton!
     @IBOutlet weak var Add: UIButton!
     var ref : DatabaseReference!
   let datePicker = UIDatePicker()
@@ -25,6 +24,7 @@ class InstructorsAddCourse : UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+   
     setUpElements()
     ref = Database.database().reference()
     createDatePicker()
@@ -66,9 +66,6 @@ class InstructorsAddCourse : UIViewController {
   }
   
   
-    @IBAction func DismissedButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
   
     @IBAction func AddButoon(_ sender: Any) {
     // VALIDATION
@@ -110,11 +107,11 @@ class InstructorsAddCourse : UIViewController {
   
   func setUpElements() {
      
-    DisMissButton.setTitle("Dismiss".localized, for: .normal)
-      DisMissButton.layer.borderWidth = 0
-      DisMissButton.tintColor = .white
-      DisMissButton.layer.borderColor = CGColor.init(red: 0, green: 0, blue: 1, alpha: 1)
-      DisMissButton.setTitleColor(.blue, for: .normal)
+//    DisMissButton.setTitle("Dismiss".localized, for: .normal)
+//      DisMissButton.layer.borderWidth = 0
+//      DisMissButton.tintColor = .white
+//      DisMissButton.layer.borderColor = CGColor.init(red: 0, green: 0, blue: 1, alpha: 1)
+//      DisMissButton.setTitleColor(.blue, for: .normal)
   }
   
   

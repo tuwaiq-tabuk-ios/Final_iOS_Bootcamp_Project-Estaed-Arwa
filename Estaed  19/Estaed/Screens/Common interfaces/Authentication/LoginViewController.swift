@@ -168,12 +168,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             }else
             {
               Constant.StudentId = (result?.user.uid)!
-               
-                let next = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StudentCoursesName") as! StudentCoursesName
-             
-//               let navi = UINavigationController(rootViewController: next)
-               next.modalPresentationStyle = .fullScreen
-              self.navigationController?.pushViewController(next, animated: true)
+               ////////tabBar Begin
+              Constant.navigateToUserScreen(context: self.navigationController!)
             }
           }
         }

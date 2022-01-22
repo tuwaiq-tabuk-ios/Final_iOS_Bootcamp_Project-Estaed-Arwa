@@ -85,28 +85,44 @@ class Constant
     
   }
   
+  static func navigateToUserScreen(context : UINavigationController)
+  {
+    let StudentCoursesName = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StudentCoursesName") as! StudentCoursesName
+    
+    let MyCourseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MyCourseViewController") as! MyCourseViewController
+    
+    let MyFavoraitViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MyFavoraitViewController") as! MyFavoraitViewController
+    
+    let ProfileStudentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ProfileStudentViewController") as! ProfileStudentViewController
+    StudentCoursesName.title = "Avilable Courses"
+    MyCourseViewController.title = "My Courses"
+    MyFavoraitViewController.title = "Favorait challenge"
+    ProfileStudentViewController.title = "Profile"
+    //----------
+    let tabBar = UITabBarController()
+    tabBar.setViewControllers([
+      StudentCoursesName,MyCourseViewController,
+      MyFavoraitViewController,ProfileStudentViewController
+    
+    
+    ], animated: false)
+    guard let  items = tabBar.tabBar.items else{return}
+
+    items[0].image = UIImage(systemName: "person.cricle")
+    items[1].image = UIImage(systemName: "person.cricle")
+    items[2].image = UIImage(systemName: "person.cricle")
+    items[3].image = UIImage(systemName: "person.cricle")
+    
+    context.pushViewController(tabBar, animated: false)
+  }
+  
 }
 
 extension String {
   var localized : String {
   return NSLocalizedString(self,tableName: "Localizable",comment: self)
 }
-  //func localized() -> String {
-  //return NSLocalizedString(
-  // self,
-  // tableName: "Localizable",
-  // bundle: .main,
-  // value: self,
-  // comment: self
-  //)
   
-  //for seguy
-//  func localizableString(loc: String) -> String{
-//    let path = Bundle.main.path(forResource: loc, ofType: "lproj")
-//    let bundle = Bundle(path: path!)
-//    return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
-//    
-//  }
 
 }
 
